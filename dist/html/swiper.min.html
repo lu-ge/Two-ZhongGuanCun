@@ -1,0 +1,221 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>常用焦点图</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: rgb(235, 208, 204);
+        }
+
+        .pc-slide {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        .view .swiper-container {
+            width: 450px;
+            height: 450px;
+        }
+
+        .view .arrow-left {
+            background: url(../img/index_tab_l.png) no-repeat left top;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -25px;
+            width: 28px;
+            height: 51px;
+            z-index: 10;
+        }
+
+        .view .arrow-right {
+            background: url(../img/index_tab_r.png) no-repeat left bottom;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -25px;
+            width: 28px;
+            height: 51px;
+            z-index: 10;
+        }
+
+        .view .swiper-container .swiper-wrapper a{
+            width: 450px;
+            height: 450px;
+        }
+        .view .swiper-container .swiper-wrapper a img{
+            width: 450px;
+            height: 450px;
+        }
+        .preview {
+            width: 95%;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .preview .swiper-container {
+            width: 437px;
+            height: 70px;
+            margin: 0 30px;
+        }
+
+        .preview .swiper-slide {
+            width: 62px;
+            height: 60px;
+            cursor: pointer;
+        }
+        .preview .swiper-slide img{
+            width: 60px;
+            height: 60px;
+        }
+
+        .preview .slide6 {
+            width: 82px;
+        }
+
+        .preview .arrow-left {
+            background: url(../img/feel3.png) no-repeat left top;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -9px;
+            width: 9px;
+            height: 18px;
+            z-index: 10;
+        }
+
+        .preview .arrow-right {
+            background: url(../img/feel4.png) no-repeat left bottom;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -9px;
+            width: 9px;
+            height: 18px;
+            z-index: 10;
+        }
+
+        .preview img {
+            padding: 1px;
+        }
+
+        .preview .active-nav img {
+            padding: 0;
+            border: 1px solid #F00;
+        }
+    </style>
+    <div class="pc-slide">
+        <div class="view">
+            <div class="swiper-container swiper-container-horizontal">
+                <a class="arrow-left" href="#"></a>
+                <a class="arrow-right" href="#"></a>
+                <div class="swiper-wrapper" style="transform: translate3d(-450px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-prev" style="width:450px;">
+                        <a href="#" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" style="width:450px;">
+                        <a href="#" style="display: block;" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="width:450px;">
+                        <a href="#" style="display: block;" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide" style="width:450px;">
+                        <a href="#" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide" style="width:450px;">
+                        <a href="#" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide" style="width:450px;">
+                        <a href="#" target="_blank"><img style="width:450px;" src="../img/hot2.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="preview">
+            <a class="arrow-left" href="#"></a>
+            <a class="arrow-right" href="#"></a>
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide active-nav swiper-slide-next">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide6">
+                        <img src="../img/floor02.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/swiper-3.4.2.min.js"></script>
+
+    <script>
+        var viewSwiper = new Swiper('.view .swiper-container', {
+            onSlideChangeStart: function () {
+                updateNavPosition()
+            }
+        })
+
+        $('.view .arrow-left,.preview .arrow-left').on('click', function (e) {
+            e.preventDefault()
+            if (viewSwiper.activeIndex == 0) {
+                viewSwiper.slideTo(viewSwiper.slides.length - 1, 900);
+                return
+            }
+            viewSwiper.slidePrev()
+        })
+        $('.view .arrow-right,.preview .arrow-right').on('click', function (e) {
+            e.preventDefault()
+            if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+                viewSwiper.slideTo(0, 900);
+                return
+            }
+            viewSwiper.slideNext()
+        })
+
+        var previewSwiper = new Swiper('.preview .swiper-container', {
+            //visibilityFullFit: true,
+            slidesPerView: 'auto',
+            allowTouchMove: false,
+            onTap: function () {
+                viewSwiper.slideTo(previewSwiper.clickedIndex)
+            }
+        })
+
+        function updateNavPosition() {
+            $('.preview .active-nav').removeClass('active-nav')
+            var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+            if (!activeNav.hasClass('swiper-slide-visible')) {
+                if (activeNav.index() > previewSwiper.activeIndex) {
+                    var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+                    previewSwiper.slideTo(activeNav.index() - thumbsPerNav)
+                } else {
+                    previewSwiper.slideTo(activeNav.index())
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
