@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/css/product.min.css">
+  
+    <script src="../../dist/js/jquery-1.12.4.min.js"></script>
+    <script src="../../dist/js/jquery.cookie.min.js"></script>
+    <script src="../../dist/js/tool.min.min.js"></script>
+    <script src="../../dist/js/product.min.js"></script>
 </head>
 <body>
     
@@ -792,7 +797,7 @@
     <!-- good -->
     <div class="good">
         <ul class="good-list">
-            <li class="lins">
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-01.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -803,8 +808,8 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
-            <li class="lins">
+            </li> -->
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-02.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -815,8 +820,8 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
-            <li class="lins">
+            </li> -->
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-03.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -827,8 +832,8 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
-            <li class="lins">
+            </li> -->
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-04.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -839,8 +844,8 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
-            <li class="lins">
+            </li> -->
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-05.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -851,8 +856,8 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
-            <li class="lins">
+            </li> -->
+            <!-- <li class="lins">
                 <a href="#" class="image"><img src="../img/good-06.jpg" alt=""></a>
                 <div class="title">
                     <a href="#">
@@ -863,7 +868,7 @@
                     ￥<span>5200.00</span>
                     <div class="cart"></div>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </div>
 
@@ -893,5 +898,53 @@
         </div>
     </div>
 
+    
+    <!-- <script type="text/javascript">
+        
+        //获取goodList
+        $('.good-list').delegate('.lins #buy','click',function(event){
+            //id
+            let good_id = $(this).parent().prev().prev().attr("id");
+            //src
+            let good_src = $(this).parent().prev().prev().children('img').attr('src');
+            //name
+            let good_name = $(this).parent().prev().children('a').text();
+            //价格
+            let good_price = parseInt($(this).prev().text());
+            alert('已添加购物车');
+            /*
+                key : carts
+                value: 
+                {
+                    "sp1" : {
+
+                    }
+                }
+            */
+            //获取cookie
+            let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
+            //转对象
+            let cookieObj = convertStrToObj(cookieStr);
+
+            if(good_id in cookieObj){
+                cookieObj[good_id].num ++;
+            }else{
+                cookieObj[good_id] = {
+                    "name" : good_name,
+                    "src" : good_src,
+                    "price" : good_price,
+                    "num" : 1
+                }
+            }
+            $.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
+
+            alert('已添加购物车');
+            location.href = 'cart.html';
+        })
+    </script> -->
+
+    <script>
+        new Cart();
+    </script>
 </body>
 </html>

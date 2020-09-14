@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../dist/css/index.min.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <script src="../dist/js/jquery-1.12.4.min.js"></script>
+    <script src="../dist/js/jquery.cookie.min.js"></script>
+    <script src="../dist/js/tool.min.min.js"></script>
+    <script src="../dist/js/index.min.js"></script>
 
 </head>
 <body>
@@ -75,7 +79,7 @@
                             <li>
                                 <p class="lis-1"><a href="#">笔记本</a></p>
                                 <p class="lis-2"> 
-                                    <a href="./html/product.html">笔记本电脑</a>
+                                    <a href="./html/product.html?jump=count">笔记本电脑</a>
                                     <a href="#">笔记本电源适配器</a>
                                     <a href="#">笔记本电池</a>
                                     <a href="#">笔记本包</a>
@@ -744,12 +748,12 @@
                 <div class="login">
                     <div class="title">会员登录</div>
                     <div class="tent">
-                        <input type="text" placeholder="手机号/邮箱/用户名" class="phone">
+                        <input type="text" placeholder="手机号" class="phone">
                         <input type="password" placeholder="密码" class="password">
                         <button class="loginBtn">登录</button>
                         <div class="option">
                             <a href="#" target="_blank">忘记密码</a>
-                            <a href="#" target="_blank">注册</a>
+                            <a href="./html/registor.html" target="_blank">注册</a>
                         </div>
                     </div>
                 </div>
@@ -765,6 +769,8 @@
             
         </div>
     </div>
+
+    
     <!-- hot -->
     <div class="hot">
         <div class="hot-buy">
@@ -1357,12 +1363,6 @@
     </div>
     
 
-    
-
-
-
-
-
     <!-- Swiper JS -->
     <script src="./js/swiper-3.4.2.min.js"></script>
     
@@ -1379,6 +1379,11 @@
         loop : true,
         autoplayDisableOnInteraction: false
     });
+    </script>
+
+
+    <script>
+        new Login();
     </script>
 </body>
 </html>

@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="../../dist/css/product.min.css">
-  
-    <script src="../../dist/js/jquery-1.12.4.min.js"></script>
-    <script src="../../dist/js/jquery.cookie.min.js"></script>
-    <script src="../../dist/js/tool.min.js"></script>
-    <script src="../../dist/js/product.min.js"></script>
+    <link rel="stylesheet" href="../../dist/css/details.min.css">
+    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/swiper-3.4.2.min.js"></script>
+    <script src="../js/details.js"></script>
 </head>
 <body>
     
+    
+
     <!-- site-nav -->
     <div class="site-nav">
         <div class="site-nav-warp">
@@ -69,11 +70,11 @@
         <div class="menu-cont">
             <div class="menu-first">
                 全部商品分类
-                <ul class='menu_one'>
+                <ul class="menu_one">
                     <li class="lin">
                         <span class="icon icon-1"></span>
                         <span class="name">笔记本 / 超极本 / 台式电脑</span>
-                        <ul class='menu_two lins1'>
+                        <ul class="menu_two lins1">
                             <li>
                                 <p class="lis-1"><a href="#">笔记本</a></p>
                                 <p class="lis-2"> 
@@ -106,7 +107,7 @@
                     <li class="lin">
                         <span class="icon icon-2"></span>
                         <span class="name">办公打印 / 投影 / 监控 / 软件</span>
-                        <ul class='menu_two lins2'>
+                        <ul class="menu_two lins2">
                             <li>
                                 <p class="lis-1"><a href="#">办公打印</a></p>
                                 <p class="lis-2"> 
@@ -196,7 +197,7 @@
                     <li class="lin">
                         <span class="icon icon-3"></span>
                         <span class="name">厨卫电器 / 小家电 / 生活家电</span>
-                        <ul class='menu_two lins3'>
+                        <ul class="menu_two lins3">
                             <li>
                                 <p class="lis-1"><a href="#">厨房小家电</a></p>
                                 <p class="lis-2"> 
@@ -289,7 +290,7 @@
                     <li class="lin">
                         <span class="icon icon-4"></span>
                         <span class="name">大家电 / 影音电视 / 游戏机</span>
-                        <ul class='menu_two lins4'>
+                        <ul class="menu_two lins4">
                             <li>
                                 <p class="lis-1"><a href="#">HIFI一体机</a></p>
                                 <p class="lis-2"> 
@@ -343,7 +344,7 @@
                     <li class="lin">
                         <span class="icon icon-5"></span>
                         <span class="name">手机 / 智能手机 / 通讯产品</span>
-                        <ul class='menu_two lins5'>
+                        <ul class="menu_two lins5">
                             <li>
                                 <p class="lis-1"><a href="#">手机</a></p>
                                 <p class="lis-2"> 
@@ -371,7 +372,7 @@
                     <li class="lin">
                         <span class="icon icon-6"></span>
                         <span class="name">数码产品 / MP3 / 移动电源</span>
-                        <ul class='menu_two lins6'>
+                        <ul class="menu_two lins6">
                             <li>
                                 <p class="lis-1"><a href="#">数码产品</a></p>
                                 <p class="lis-2"> 
@@ -415,7 +416,7 @@
                     <li class="lin">
                         <span class="icon icon-7"></span>
                         <span class="name">数码相机 / 单反 / 数码摄像机</span>
-                        <ul class='menu_two lins7'>
+                        <ul class="menu_two lins7">
                             <li>
                                 <p class="lis-1"><a href="#">相机摄像机</a></p>
                                 <p class="lis-2"> 
@@ -446,7 +447,7 @@
                     <li class="lin">
                         <span class="icon icon-8"></span>
                         <span class="name">服务器 / 网络 / 无线 / 布线</span>
-                        <ul class='menu_two lins8'>
+                        <ul class="menu_two lins8">
                             <li>
                                 <p class="lis-1"><a href="#">服务器</a></p>
                                 <p class="lis-2"> 
@@ -507,7 +508,7 @@
                     <li class="lin">
                         <span class="icon icon-9"></span>
                         <span class="name">DIY硬件 / 外设 / 模拟攒机</span>
-                        <ul class='menu_two lins9'>
+                        <ul class="menu_two lins9">
                             <li>
                                 <p class="lis-1"><a href="#">扩展配件</a></p>
                                 <p class="lis-2"> 
@@ -550,7 +551,7 @@
                     <li class="lin">
                         <span class="icon icon-10"></span>
                         <span class="name">平板电脑 / 智能穿戴 / 智能家居</span>
-                        <ul class='menu_two lins10'>
+                        <ul class="menu_two lins10">
                             <li>
                                 <p class="lis-1"><a href="#">平板产品</a></p>
                                 <p class="lis-2"> 
@@ -588,7 +589,7 @@
                     <li class="lin">
                         <span class="icon icon-11"></span>
                         <span class="name">汽车电子 / 电动车 / 代步出行</span>
-                        <ul class='menu_two lins11'>
+                        <ul class="menu_two lins11">
                             <li>
                                 <p class="lis-1"><a href="#">安全自驾</a></p>
                                 <p class="lis-2"> 
@@ -689,14 +690,14 @@
                 </ul>
             </div>
 
-            <ul class='menu1'>
+            <ul class="menu1">
                 <li>解决方案馆</li>
                 <li>政府采购</li>
                 <li>企业采购</li>
                 <li>福利采购</li>
                 <li>中在指数
                     <div class="san"></div>
-                    <ul class='menu2'>
+                    <ul class="menu2">
                         <li>价格指数</li>
                         <li>销量指数</li>
                         <li>交易指数</li>
@@ -714,163 +715,105 @@
             <a href="../index.html">首页</a>
             <span>
                 <b>></b>
-                <a href="#" class="one">笔记本</a>
+                <a href="#" class="one">笔记本电脑</a>
             </span>
             <span>
                 <b>></b>
-                <a href="#" class="two">笔记本电脑</a>
+                <a href="#" class="one">微软</a>
+            </span>
+            <span>
+                <b>></b>
+                <a href="#" class="two">微软Surface Pro(64GB/中文版)</a>
             </span>
         </div>
     </div>
-    <!-- select -->
-    <div class="select">
-        <div class="selector">
-            <div class="items">
-                <div class="left">
-                    <span>分类：</span>
-                </div>
-                <div class="right">
-                    <a href="#">全部</a>
-                    <a href="#">笔记本电脑</a>
-                    <a href="#">笔记本电源适配器</a>
-                    <a href="#">笔记本电池</a>
-                    <a href="#">笔记本包</a>
-                    <a href="#">笔记本扩展坞/底座</a>
-                    <a href="#">笔记本支架</a>
-                    <a href="#">笔记本膜</a>
-                    <a href="#">电脑清洁</a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="left left-2">
-                    <span>品牌：</span>
-                </div>
-                <div class="right right-2">
-                    <a href="#">全部</a>
-                    <a href="#">lenovo（联想）</a>
-                    <a href="#">HP（惠普）</a>
-                    <a href="#"> DELL（戴尔）</a>
-                    <a href="#">华为</a>
-                    <a href="#">ASUS（华硕）</a>
-                    <a href="#">Acer宏碁</a>
-                    <a href="#">Microsoft（微软）</a>
-                    <a href="#">Apple（苹果）</a>
-                    <a href="#">ThinkPadAlienware（外星人）</a>
-                    <a href="#">神舟</a>
-                    <a href="#">MECHREVO（机械革命）</a>
-                    <a href="#">Samsung（三星）</a>
-                    <a href="#">Thunderobot（雷神）</a>
-                    <a href="#">MACHENIKE（机械师）</a>
-                    <a href="#">荣耀</a>
-                    <a href="#">ROG</a>
-                    <a href="#">msi微星</a>
-                    <a href="#">Redmi（红米）</a>
-                    <a href="#">小米</a>
+   
 
-                </div>
-                <div class="more">
-                    <!-- <img src="../" alt=""> -->
-                   <span>更多</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- warp -->
-    <div class="warp">
-        <div class="warp-list">
-            <ul class="sort">
-                <li class="sort-item active">默认</li>
-                <li class="sort-item">价格由低到高</li>
-                <li class="sort-item">价格由高到低</li>
-                <div class="pager">
-                    <span>1</span>/<span>300</span>
-                    <div class="choice">
-                        <a  class="prev"></a><a  class="next"></a>
-                        
+    
+    <!-- det-box -->
+    <div class="det-box">
+        <div class="det-content">
+            <!-- 
+
+            <div class="pc-slide">
+                <div class="view">
+                    <div class="swiper-container swiper-container-horizontal" id="swiper-container">
+                        <a class="arrow-left" href="#"></a>
+                        <a class="arrow-right" href="#"></a>
+                        <div class="swiper-wrapper" style="transform: translate3d(-450px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-prev" style="width:450px;">
+                                <a href="#" target="_blank"><img style="width:450px;" src="../img/slid-02.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-active" style="width:450px;">
+                                <a href="#" style="display: block;" target="_blank"><img style="width:450px;" src="../img/slid-01.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next" style="width:450px;">
+                                <a href="#" style="display: block;" target="_blank"><img style="width:450px;" src="../img/slid-03.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide" style="width:450px;">
+                                <a href="#" target="_blank"><img style="width:450px;" src="../img/slid-04.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide" style="width:450px;">
+                                <a href="#" target="_blank"><img style="width:450px;" src="../img/slid-04.jpg" alt=""></a>
+                            </div>
+                            
+                        </div>
                     </div>
-
                 </div>
-            </ul>
+                <div class="preview">
+                    <a class="arrow-left" href="#"></a>
+                    <a class="arrow-right" href="#"></a>
+                    <div class="swiper-container swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                            <div class="swiper-slide swiper-slide-active">
+                                <img src="../img/slid-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide active-nav swiper-slide-next">
+                                <img src="../img/slid-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/slid-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/slid-04.jpg" alt="">
+                            </div>
+                            
+                            <div class="swiper-slide slide5">
+                                <img src="../img/slid-05.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inform">
+                <div class="inform-name">微软Surface Pro(64GB/中文版)</div>
+                <div class="inform-price">
+                    <span>价<span>格</span></span>
+                    <span>￥<span>5200.00</span></span>
+                </div>
+                <div class="inform-count"><span>价<span>格</span></span>
+                    <div class="inform-num">
+                        <p>
+                            <img src="../img/jian.png" alt="">
+                        </p>
+                        <p>1</p>
+                        <p>
+                            <img src="../img/jia.png" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="inform-btn">
+                    <p>加入购物车</p>
+                </div>
+            </div>
+             -->
+        
             
         </div>
     </div>
-    <!-- good -->
-    <div class="good">
-        <ul class="good-list">
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-01.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-02.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-03.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-04.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-05.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-            <!-- <li class="lins">
-                <a href="#" class="image"><img src="../img/good-06.jpg" alt=""></a>
-                <div class="title">
-                    <a href="#">
-                        微软Surface Pro(64GB/中文版)
-                    </a>
-                </div>
-                <div class="price-into">
-                    ￥<span>5200.00</span>
-                    <div class="cart"></div>
-                </div>
-            </li> -->
-        </ul>
-    </div>
+
+
+   
 
 
 
@@ -898,53 +841,54 @@
         </div>
     </div>
 
-    
-    <!-- <script type="text/javascript">
-        
-        //获取goodList
-        $('.good-list').delegate('.lins #buy','click',function(event){
-            //id
-            let good_id = $(this).parent().prev().prev().attr("id");
-            //src
-            let good_src = $(this).parent().prev().prev().children('img').attr('src');
-            //name
-            let good_name = $(this).parent().prev().children('a').text();
-            //价格
-            let good_price = parseInt($(this).prev().text());
-            alert('已添加购物车');
-            /*
-                key : carts
-                value: 
-                {
-                    "sp1" : {
 
+<script>
+                var viewSwiper = new Swiper('#swiper-container', {
+                    
+                    onSlideChangeStart: function () {
+                        updateNavPosition()
+                    }
+                })
+        
+                $('.view .arrow-left,.preview .arrow-left').on('click', function (e) {
+                    e.preventDefault()
+                    if (viewSwiper.activeIndex == 0) {
+                        viewSwiper.slideTo(viewSwiper.slides.length - 1, 900);
+                        return
+                    }
+                    viewSwiper.slidePrev()
+                })
+                $('.view .arrow-right,.preview .arrow-right').on('click', function (e) {
+                    e.preventDefault()
+                    if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+                        viewSwiper.slideTo(0, 900);
+                        return
+                    }
+                    viewSwiper.slideNext()
+                })
+        
+                var previewSwiper = new Swiper('.preview .swiper-container', {
+                    //visibilityFullFit: true,
+                    slidesPerView: 'auto',
+                    allowTouchMove: false,
+                    
+                    onTap: function () {
+                        viewSwiper.slideTo(previewSwiper.clickedIndex)
+                    }
+                })
+        
+                function updateNavPosition() {
+                    $('.preview .active-nav').removeClass('active-nav')
+                    var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+                    if (!activeNav.hasClass('swiper-slide-visible')) {
+                        if (activeNav.index() > previewSwiper.activeIndex) {
+                            var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+                            previewSwiper.slideTo(activeNav.index() - thumbsPerNav)
+                        } else {
+                            previewSwiper.slideTo(activeNav.index())
+                        }
                     }
                 }
-            */
-            //获取cookie
-            let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
-            //转对象
-            let cookieObj = convertStrToObj(cookieStr);
-
-            if(good_id in cookieObj){
-                cookieObj[good_id].num ++;
-            }else{
-                cookieObj[good_id] = {
-                    "name" : good_name,
-                    "src" : good_src,
-                    "price" : good_price,
-                    "num" : 1
-                }
-            }
-            $.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
-
-            alert('已添加购物车');
-            location.href = 'cart.html';
-        })
-    </script> -->
-
-    <script>
-        new Cart();
     </script>
 </body>
 </html>

@@ -20,7 +20,7 @@ const babel = require('gulp-babel');
 function fnHtml(){
     return gulp.src('./src/html/*.html')
            .pipe(html())
-           .pipe(rename({suffix:'.min'}))
+        //    .pipe(rename({suffix:'.min'}))
            .pipe(gulp.dest('./dist/html'));
 }
 

@@ -6,9 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/css/details.min.css">
     <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/swiper-3.4.2.min.js"></script>
+    <script src="../js/details.js"></script>
 </head>
 <body>
     
+    
+
     <!-- site-nav -->
     <div class="site-nav">
         <div class="site-nav-warp">
@@ -22,9 +27,9 @@
                 <a href="#" target="_blank">中在指数</a>
             </div>
             <div class="site-nav-right">
-                <a href="#" target="_blank">登录</a>
+                <a href="./login.html" target="_blank">登录</a>
                 <span></span>
-                <a href="#" target="_blank">注册</a>
+                <a href="./registor.html" target="_blank">注册</a>
             </div>
         </div>
     </div>
@@ -728,6 +733,8 @@
     <!-- det-box -->
     <div class="det-box">
         <div class="det-content">
+            <!-- 
+
             <div class="pc-slide">
                 <div class="view">
                     <div class="swiper-container swiper-container-horizontal" id="swiper-container">
@@ -749,10 +756,7 @@
                             <div class="swiper-slide" style="width:450px;">
                                 <a href="#" target="_blank"><img style="width:450px;" src="../img/slid-04.jpg" alt=""></a>
                             </div>
-                            <!-- <div class="swiper-slide" style="width:450px;">
-                                <a href="#"
-                                    target="_blank"><img style="width:450px;" src="../img/slid-03.jpg" alt=""></a>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
@@ -773,9 +777,7 @@
                             <div class="swiper-slide">
                                 <img src="../img/slid-04.jpg" alt="">
                             </div>
-                            <!-- <div class="swiper-slide">
-                                <img src="../img/slid-05.jpg" alt="">
-                            </div> -->
+                            
                             <div class="swiper-slide slide5">
                                 <img src="../img/slid-05.jpg" alt="">
                             </div>
@@ -804,15 +806,43 @@
                     <p>加入购物车</p>
                 </div>
             </div>
+             -->
         
             
         </div>
     </div>
 
-<!-- slider JS-->
-    <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/swiper-3.4.2.min.js"></script>
-   <script>
+
+   
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-con">
+            <div class="qrcode">
+                <img src="../img/code02.png" alt="">
+            </div>
+            <div class="concat">
+                <img src="../img/rex.png" class="foot-icon">
+                <span class="tel-text">热线电话</span>
+                <span class="tel">400-688-1999</span>
+            </div>
+            <div class="copy">
+                <span>©2020 北京知行锐景科技有限公司 / 北京中在云商科技有限公司  版权备案单位/子公司</span>
+            </div>
+            <div class="copy">
+                <span>京ICP证150096号</span>
+                <span>京ICP备14061128号</span>
+                <span>京公网安备11010802020026号</span>
+                <span>网络文化经营许可证京网文[2016]1631-199</span>
+                <span>增值电信业务经营许可证：京B2-20200543</span>
+            </div>
+        </div>
+    </div>
+
+
+<script>
                 var viewSwiper = new Swiper('#swiper-container', {
                     
                     onSlideChangeStart: function () {
@@ -860,32 +890,5 @@
                     }
                 }
     </script>
-
-
-
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer-con">
-            <div class="qrcode">
-                <img src="../img/code02.png" alt="">
-            </div>
-            <div class="concat">
-                <img src="../img/rex.png" class="foot-icon">
-                <span class="tel-text">热线电话</span>
-                <span class="tel">400-688-1999</span>
-            </div>
-            <div class="copy">
-                <span>©2020 北京知行锐景科技有限公司 / 北京中在云商科技有限公司  版权备案单位/子公司</span>
-            </div>
-            <div class="copy">
-                <span>京ICP证150096号</span>
-                <span>京ICP备14061128号</span>
-                <span>京公网安备11010802020026号</span>
-                <span>网络文化经营许可证京网文[2016]1631-199</span>
-                <span>增值电信业务经营许可证：京B2-20200543</span>
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>

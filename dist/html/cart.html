@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/css/cart.min.css">
 
+    <script src="../../dist/js/jquery-1.12.4.min.js"></script>
+    <script src="../../dist/js/jquery.cookie.min.js"></script>
+    <script src="../../dist/js/tool.min.min.js"></script>
+    
+
 </head>
 <body>
     
@@ -31,12 +36,12 @@
     <!-- header -->
     <div class="header">
         <div class="header-body">
-            <a href="./index.html" class="logo"></a>
+            <a href="../index.html" class="logo"></a>
             <div class="title">购物车</div>
             <div class="search">
                 <div class="search-top">
                     <div class="search-input">
-                        <div class="search-img"><img src="./img/suo.png" alt=""></div>
+                        <div class="search-img"><img src="../img/suo.png" alt=""></div>
                         <input class="inp" type="text" placeholder="找找你想要的产品">
                     </div>
                     <div class="search-suo">搜索</div>
@@ -62,7 +67,7 @@
     <!-- carts -->
     <div class="carts">
         <div class="cart-box">
-            <h1>全部商品 <span>2</span></h1>
+            <h1>全部商品 <span class="cart-class-num">2</span></h1>
             <div class="cart-content">
                 <div class="cart-title">
                     <span class="cart-pro-desc">商品信息</span>
@@ -71,9 +76,10 @@
                     <span class="cart-pro-priceCount">金额</span>
                     <span class="cart-pro-operation">操作</span>
                 </div>
+                
 
                 <!-- product list-->
-                <div class="cart-box-pro-box">
+                <!-- <div class="cart-box-pro-box">
                     <div class="c-b-proImg">
                         <img src="../img/slid-01.jpg" alt="">
                     </div>
@@ -84,8 +90,8 @@
                     </div>
                     <span class="c-b-priceCount">5200.00</span>
                     <span class="c-b-operation">删除</span>
-                </div>
-                <div class="cart-box-pro-box">
+                </div> -->
+                <!-- <div class="cart-box-pro-box">
                     <div class="c-b-proImg">
                         <img src="../img/slid-01.jpg" alt="">
                     </div>
@@ -96,8 +102,8 @@
                     </div>
                     <span class="c-b-priceCount">5200.00</span>
                     <span class="c-b-operation">删除</span>
-                </div>
-                <div class="cart-box-pro-box">
+                </div> -->
+                <!-- <div class="cart-box-pro-box">
                     <div class="c-b-proImg">
                         <img src="../img/slid-01.jpg" alt="">
                     </div>
@@ -108,8 +114,8 @@
                     </div>
                     <span class="c-b-priceCount">5200.00</span>
                     <span class="c-b-operation">删除</span>
-                </div>
-                <div class="cart-box-pro-box">
+                </div> -->
+                <!-- <div class="cart-box-pro-box">
                     <div class="c-b-proImg">
                         <img src="../img/slid-01.jpg" alt="">
                     </div>
@@ -120,32 +126,8 @@
                     </div>
                     <span class="c-b-priceCount">5200.00</span>
                     <span class="c-b-operation">删除</span>
-                </div>
-                <div class="cart-box-pro-box">
-                    <div class="c-b-proImg">
-                        <img src="../img/slid-01.jpg" alt="">
-                    </div>
-                    <span class="c-b-goodsName">微软Surface Pro(64GB/中文版)</span>
-                    <span class="c-b-price">5200.00</span>
-                    <div class="c-b-proCount">
-                        <span class="reduce">-</span><span class="c-b-proCount-input">1</span><span class="plus">+</span>
-                    </div>
-                    <span class="c-b-priceCount">5200.00</span>
-                    <span class="c-b-operation">删除</span>
-                </div>
-                <div class="cart-box-pro-box">
-                    <div class="c-b-proImg">
-                        <img src="../img/slid-01.jpg" alt="">
-                    </div>
-                    <span class="c-b-goodsName">微软Surface Pro(64GB/中文版)</span>
-                    <span class="c-b-price">5200.00</span>
-                    <div class="c-b-proCount">
-                        <span class="reduce">-</span><span class="c-b-proCount-input">1</span><span class="plus">+</span>
-                    </div>
-                    <span class="c-b-priceCount">5200.00</span>
-                    <span class="c-b-operation">删除</span>
-                </div>
-
+                </div> -->
+               
             </div>
         </div>
     </div>
@@ -155,17 +137,17 @@
         <div class="submit">
             <div class="cart-sub-left">
                 <img src="../img/rubi.png" alt="">
-                <span>清空购物车</span>
+                <span class="delete-all">清空购物车</span>
             </div>
             <div class="cart-sub-right">
                 <span class="cart-choice">
                     已选择
-                    <span>4</span>
+                    <span class="cart-choice-num">4</span>
                     件商品
                 </span>
                 <span class="cart-z-price">
                     合计（不含运费）：
-                    <span>￥5786.00</span>
+                    <span class="cart-z-price-num">￥5786.00</span>
                 </span>
                 <span class="cart-sub-price">
                     结算
@@ -208,6 +190,7 @@
     
 
 
+<script src="../../dist/js/cart.min.js"></script>
 
 
 
