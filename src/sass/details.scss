@@ -1,4 +1,7 @@
-body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+@import "publish";
+
+
+/* body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
 	margin:0;
 	padding:0;
 }
@@ -22,8 +25,9 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-
+ */
 /* site-nav */
+/*
 .site-nav{
 	height: 30px;
     line-height: 30px;
@@ -56,9 +60,10 @@ body{
         }
     }
 }
+*/
 
 /* header */
-
+/*
 .header{
 	width: 100%;
 	height: 112px;
@@ -85,7 +90,7 @@ body{
                 width: 600px;
                 height: 38px;
                 margin-bottom: 4px;
-                /* background: #f6f6f6; */
+                // background: #f6f6f6;
                 .search-input{
                     border-top-left-radius: 19px;
                     border-bottom-left-radius: 19px;
@@ -126,7 +131,7 @@ body{
             .search-bottom{
                 width: 585px;
                 height: 18px;
-                /* background: #f6f6f6; */
+                // background: #f6f6f6; 
                 padding-left: 15px;
                 line-height: 18px;
                 a{
@@ -155,8 +160,10 @@ body{
         }
     }
 }
+*/
 
 /* menu */
+/*
 .menu{
 	width: 100%;
     background: #fc002d;
@@ -165,12 +172,12 @@ body{
         width: 1200px;
         height: 35px;
         margin: 0 auto;
-        /* background: rgb(115, 204, 211); */
+        // background: rgb(115, 204, 211);
         list-style: none;
         line-height: 35px;
         color: white;
         
-    /* menu-first */
+    // menu-first 
         .menu-first{
             width: 230px;
             height: 35px;
@@ -196,7 +203,7 @@ body{
                     font-size: 13px;
                     color: #333;
                     cursor: default;
-                    /* display: none; */
+                    // display: none; 
                     .icon{
                         float: left;
                         width: 17px;
@@ -336,7 +343,7 @@ body{
         }
 
 
-    /* menu_1 */
+    //menu_1 
         .menu1{
             float: left;
             >li{
@@ -394,6 +401,7 @@ body{
 
     }
 }
+*/
 
 /*  header-lead  */
 .header-lead{
@@ -684,6 +692,7 @@ body{
 
 
 /* footer */
+/*
 .footer{
     width: 100%;
     height: 140px;
@@ -733,3 +742,5 @@ body{
         }
     }
 }
+
+*/

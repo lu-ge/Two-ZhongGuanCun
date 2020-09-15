@@ -33,6 +33,14 @@ function fnSass(){
            .pipe(gulp.dest('./dist/css'));
 }
 
+// css
+function fnCss(){
+    return gulp.src('./src/css/*.css')
+           .pipe(cssnano())
+           .pipe(rename({suffix:'.min'}))
+           .pipe(gulp.dest('./dist/css'));
+}
+
 // js
 function fnJs(){
     return gulp.src('./src/js/*.js')
@@ -66,6 +74,7 @@ function fnLib(){
 
 // 创建监听
 function fnWatch(){
+    gulp.watch('./src/css/*.css',fnCss);
     gulp.watch('./src/html/*.html',fnHtml);
     gulp.watch('./src/sass/*.scss',fnSass);
     gulp.watch('./src/js/*.js',fnJs);
@@ -75,6 +84,7 @@ function fnWatch(){
 }
 
 // 导入任务
+exports.css = fnCss;
 exports.html = fnHtml;
 exports.sass = fnSass;
 exports.js = fnJs;

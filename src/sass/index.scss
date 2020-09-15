@@ -1,4 +1,7 @@
-body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+
+@import "style-bottom";
+
+/* body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
 	margin:0;
 	padding:0;
 }
@@ -21,7 +24,7 @@ html,body{
 body{
 	display: flex;
 	flex-direction: column;
-}
+} */
 
 /* site-nav */
 .site-nav{
@@ -29,13 +32,12 @@ body{
     line-height: 30px;
     background: #f6f6f6;
     .site-nav-warp{
-        height: 30px;
-        width: 1200px;
+       
+        @include size($fixed-width,30px);
         margin: 0 auto;
         // background: #f0c4c4;
         .site-nav-left{
             float: left;
-            
         }
         a{
             color: #474747;
@@ -44,8 +46,8 @@ body{
         span{
             margin: 0 10px;
             display: inline-block;
-            height: 10px;
-            width: 1px;
+            
+            @include size(1px,10px);
             background:#d3ccd3;
         }
         .site-nav-right{
@@ -60,30 +62,25 @@ body{
 /* header */
 
 .header{
-	width: 100%;
-	height: 112px;
+	
+    @include size(100%,112px);
     background: #fff;
     .header-body{
-        width: 1200px;
-        height: 112px;
+        @include size($fixed-width,112px);
         margin: 0 auto;
-        // background: rgb(196, 226, 228);
         .logo{
             float: left;
-            width: 329px;
-            height: 58px;
+            @include size(329px,58px);
             background: url(../img/logo.png) no-repeat;
             background-size: 100% 100%;
             margin: 32px 15px 0 0;
         }
         .search{
             float: left;
-            width: 600px;
-            height: 60px;
+            @include size(600px,60px);
             margin: 30px 0 0 80px;
             .search-top{
-                width: 600px;
-                height: 38px;
+                @include size(600px,38px);
                 margin-bottom: 4px;
                 /* background: #f6f6f6; */
                 .search-input{
@@ -95,14 +92,12 @@ body{
                 }
                 .search-img{
                     float: left;
-                    width: 15px;
-                    height: 15px;
+                    @include size(15px,15px);
                     margin: 9px 7px 0px 12px;
                 }
                 .inp{
                     float: left;
-                    width: 480px;
-                    height: 28px;
+                    @include size(480px,28px);
                     padding: 0;
                     outline: none;
                     border: 0 none;
@@ -112,8 +107,7 @@ body{
                 }
                 .search-suo{
                     float: left;
-                    width: 74px;
-                    height: 38px;
+                    @include size(74px,38px);
                     border-top-right-radius: 19px;
                     border-bottom-right-radius: 19px;
                     background-color: #fd4165;
@@ -124,9 +118,7 @@ body{
                 }
             }
             .search-bottom{
-                width: 585px;
-                height: 18px;
-                /* background: #f6f6f6; */
+                @include size(585px,18px);
                 padding-left: 15px;
                 line-height: 18px;
                 a{
@@ -139,8 +131,7 @@ body{
                 span{
                     margin: 0 10px;
                     display: inline-block;
-                    height: 10px;
-                    width: 1px;
+                    @include size(1px,10px);
                     background:#d3ccd3;
                 }
             }
@@ -149,8 +140,7 @@ body{
             float: right;
             margin: 16px 0;
             img{
-                width: 80px;
-                height: 80px;
+                @include size(80px,80px);
             }
         }
     }
@@ -158,36 +148,31 @@ body{
 
 /* menu */
 .menu{
-	width: 100%;
     background: #fc002d;
-    height: 35px;
+    @include size(100%,35px);
     .menu-cont{
-        width: 1200px;
-        height: 35px;
+        @include size($fixed-width,35px);
         margin: 0 auto;
-        /* background: rgb(115, 204, 211); */
         list-style: none;
         line-height: 35px;
         color: white;
         
     /* menu-first */
         .menu-first{
-            width: 230px;
-            height: 35px;
+            @include size(230px,35px);
             line-height: 35px;
             text-align: center;
             cursor: pointer;
             float: left;
-            background-color: #df022d;
+            @include background(#df022d);
             margin-right: 10px;
             .menu_one{
                 position: absolute;
                 z-index: 10000;
                 box-shadow: 0 0 8px 1px rgba(0,0,0,.08);
                 .lin{
-                    width: 200px;
-                    height: 35px;
-                    background-color: #fff;
+                    @include size(200px,35px);
+                    @include background(#fff);
                     text-align: center;
                     position: relative;
                     padding-left: 30px;
@@ -200,16 +185,15 @@ body{
                         float: left;
                         width: 17px;
                         height: 18px;
-                        background: url(../img/menu11.png) no-repeat;
+                        @include background(url(../img/menu11.png) no-repeat);
                         margin: 8px 9px 0 -18px;
-
                     }
                     .menu_two{
                         position: absolute;
                         left: 230px;
                         width: 695px;
                         min-height: 359px;
-                        background-color: #fff;
+                        @include background(#fff);
                         border: 2px solid #fd4165;
                         padding: 6px 15px 16px 30px;
                         display: none;
@@ -282,45 +266,79 @@ body{
                         top: -350px;
                     } 
                     .icon-1{
-                        background-position: 0 1px;
+                        @include background-position(0 1px);
                     }
                     .icon-2{
-                        background-position: 0 -32px;
+                        @include background-position(0 -32px);
                     } 
                     .icon-3{
-                        background-position: 0 -67px;
+                        @include background-position(0 -67px);
                     }
                     .icon-4{
-                        background-position: 0 -101px;
+                        @include background-position(0 -101px);
                     } 
                     .icon-5{
-                        background-position: 0 -134px;
+                        @include background-position(0 -134px);
                     } 
                     .icon-6{
-                        background-position: 0 -168px;
+                        @include background-position(0 -168px);
                     }  
                     .icon-7{
-                        background-position: 0 -202px;
+                        @include background-position(0 -202px);
                     } 
                     .icon-8{
-                        background-position: 0 -237px;
+                        @include background-position(0 -237px);
                     } 
                     .icon-9{
-                        background-position: 0 -271px;
+                        @include background-position(0 -271px);
                     } 
                     .icon-10{
-                        background-position: 0 -304px;
+                        @include background-position(0 -304px);
                     } 
                     .icon-11{
-                        background-position: 0 -339px;
+                        @include background-position(0 -339px);
                     }
 
                 }
                 .lin:hover .icon{
-                    background: url(../img/menu.png) no-repeat;
+                    @include background(url(../img/menu.png) no-repeat);
+                }
+                .lin:hover .icon-1{
+                    @include background-position(0 1px);
+                }
+                .lin:hover .icon-2{
+                    @include background-position(0 -32px);
+                } 
+                .lin:hover .icon-3{
+                    @include background-position(0 -67px);
+                }
+                .lin:hover .icon-4{
+                    @include background-position(0 -101px);
+                } 
+                .lin:hover .icon-5{
+                    @include background-position(0 -134px);
+                } 
+                .lin:hover .icon-6{
+                    @include background-position(0 -168px);
+                }  
+                .lin:hover .icon-7{
+                    @include background-position(0 -202px);
+                } 
+                .lin:hover .icon-8{
+                    @include background-position(0 -237px);
+                } 
+                .lin:hover .icon-9{
+                    @include background-position(0 -271px);
+                } 
+                .lin:hover .icon-10{
+                    @include background-position(0 -304px);
+                } 
+                .lin:hover .icon-11{
+                    @include background-position(0 -339px);
                 }
                 .lin:hover{
-                    background-color:  #fc002d;
+                    @include background(#fc002d);
+                    color: #fff;
                 }
                 .lin:hover .menu_two{
                     display: block;
@@ -382,7 +400,7 @@ body{
                 border-color:transparent transparent #fff transparent;
             }
             li:hover{
-                background-color: #df022d;
+                @include background(#df022d);
             }
             li:nth-child(5):hover .menu2 {
                 display: block;
@@ -399,17 +417,18 @@ body{
 	width: 100%;
 	// background-color: rgb(187, 223, 219);
 	.content-t{
-        width: 1200px;
+        width: $fixed-width;
         // background-color: rgb(11, 110, 100);
         margin: 0 auto 34px;
         position: relative;
         z-index: 1;
+
+
         /* swiper */
 
         
         .swiper-container{
-            width: 730px;
-            height: 390px;
+            @include size(730px,390px);
             margin: 10px 10px 0 240px;
         }
         .swiper-slide {
@@ -433,36 +452,31 @@ body{
             align-items: center;
         }
         .content-right{
-            width: 220px;
-            height: 390px;
+            @include size(220px,390px);
             margin-top: 10px;
             // background-color: tomato;
             position: absolute;
             right: 0;
             top: -10px;
             .login{
-                width: 218px;
-                height: 198px;
+                @include size(218px,198px);
                 margin-bottom: 5px;
-                background: #fff;
+                @include background(#fff);
                 border: 1px solid #ebebeb;
                 .title{
                     font-size: 14px;
                     color: #fc002d;
                     text-align: center;
                     line-height: 34px;
-                    width: 100%;
-                    height: 34px;
+                    @include size(100%,34px);
                     border-bottom: 1px solid #f4f4f4;
                 }
                 .tent{
-                    width: 218px;
-                    height: 126px;
+                    @include size(218px,126px);
                     text-align: center;
                     .phone{
-                        width: 182px;
-                        height: 30px;
-                        background-color: #fff;
+                        @include size(182px,30px);
+                        @include background(#fff);
                         border: 1px solid #e5e5e5;
                         outline: none;
                         font-size: 12px;
@@ -472,9 +486,8 @@ body{
                         padding-left: 11px;
                     }
                     .password{
-                        width: 182px;
-                        height: 30px;
-                        background-color: #fff;
+                        @include size(182px,30px);
+                        @include background(#fff);
                         border: 1px solid #e5e5e5;
                         outline: none;
                         font-size: 12px;
@@ -485,8 +498,7 @@ body{
                     }
                     .loginBtn{
                         margin-top: 10px;
-                        width: 197px;
-                        height: 32px;
+                        @include size(197px,32px);
                         background-image: linear-gradient(90deg,#fd4165,#fc002d),linear-gradient(#fff,#fff);
                         border-radius: 16px;
                         border: 1px solid #fd4065;
@@ -517,16 +529,14 @@ body{
                 }
             }
             .news{
-                width: 220px;
-                height: 185px;
-                background-color: #fff;
+                @include size(220px,185px);
+                @include background(#fff);
                 border: 1px solid #ebebeb;
                 padding:  14px 58px 15px;
                 box-sizing: border-box;
                 a{  
                     display: inline-block;
-                    width: 98px;
-                    height: 24px;
+                    @include size(98px,24px);
                     color: #333;
                     margin-bottom: 16px;
                     overflow: hidden;
@@ -548,12 +558,10 @@ body{
 
 /* hot */
 .hot{
-	width: 100%;
-	height: 341px;
+    @include size(100%,341px);
 }
 .hot .hot-buy{
-	width: 1200px;
-	height: 341px;
+    @include size($fixed-width,341px);
 	margin: 0 auto;
     // background-color: wheat;
     .hot-title{
@@ -569,8 +577,7 @@ body{
             color: #666;
             cursor: pointer;
             img{
-                width: 14px;
-                height: 14px;
+                @include size(14px,14px);
             }
         }
         .reset:hover{
@@ -578,21 +585,18 @@ body{
         }
     }
     .hot-content{
-        width: 1160px;
-        height: 257px;
+        @include size(1160px,257px);
         margin-top: 7px;
         padding: 19px 20px 30px;
         background-color: #fff;
         a{  
-            width: 180px;
-            height: 257px;
+            @include size(180px,257px);
             display: inline-block;
             margin-right: 11px;
             cursor: pointer;
             text-align: center;
             img{
-                width: 180px;
-                height: 131px; 
+                @include size(180px,131px);
             }
             .good-name{
                 margin: 10px 0 7px;
@@ -604,17 +608,15 @@ body{
                 line-height: 20px;
             }
             .good-price{
-                width: 100%;
+                @include size(100%,20px);
                 text-align: center;
-                height: 20px;
                 line-height: 20px;
                 font-size: 18px;
                 color: #f33;
             }
             button{
+                @include size(120px,32px);
                 text-align: center;
-                width: 120px;
-                height: 32px;
                 line-height: 30px;
                 background-color: #fff;
                 border-radius: 2px;
@@ -644,11 +646,10 @@ body{
 
   /* wr */
 .wr{
-    width: 100%;
-    height: 110px;
+    @include size(100%,110px);
     margin-top: 20px;
     .soft{
-        width: 1200px;
+        width: $fixed-width;
         height: 110px;
         margin: 0 auto;
         a{
@@ -659,11 +660,10 @@ body{
 
 /* content */
 .content-product{
-    width: 100%;
-    height: 565px;
+    @include size(100%,565px);
     margin-top: 20px;
     .content-list{
-        width: 1200px;
+        width: $fixed-width;
         height: 565px;
         margin: 0 auto;
         // background-color: #e7a8b4;
@@ -693,7 +693,7 @@ body{
             }
         }
         .con-content{
-            width: 1200px;
+            width: $fixed-width;
             height: 525px;
             overflow: hidden;
             .con-content-left{
@@ -794,7 +794,7 @@ body{
     margin-top: 20px;
     margin-bottom: 40px;
     .plant-form{
-        width: 1200px;
+        width: $fixed-width;
         height: 355px;
         // background: rgb(194, 238, 223);
         margin: 0 auto;
@@ -866,7 +866,7 @@ body{
 }
 
 /* footer */
-.footer{
+/* .footer{
     width: 100%;
     height: 140px;
     background: #302e2e;
@@ -915,7 +915,7 @@ body{
         }
     }
 }
-
+ */
 
 
 

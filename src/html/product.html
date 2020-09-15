@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/css/product.min.css">
-  
+    <link rel="stylesheet" href="../../dist/css/zxf_page.min.css">
     <script src="../../dist/js/jquery-1.12.4.min.js"></script>
     <script src="../../dist/js/jquery.cookie.min.js"></script>
     <script src="../../dist/js/tool.min.js"></script>
     <script src="../../dist/js/product.min.js"></script>
+    <script src="../../dist/js/zxf_page.min.js"></script>
 </head>
 <body>
+    <!-- 需要打开服务器，动态获取Json数据 -->
     
     <!-- site-nav -->
     <div class="site-nav">
@@ -26,9 +28,9 @@
                 <a href="#" target="_blank">中在指数</a>
             </div>
             <div class="site-nav-right">
-                <a href="#" target="_blank">登录</a>
+                <a href="../html/login.html" target="_blank">登录</a>
                 <span></span>
-                <a href="#" target="_blank">注册</a>
+                <a href="../html/registor.html" target="_blank">注册</a>
             </div>
         </div>
     </div>
@@ -783,7 +785,7 @@
                 <li class="sort-item">价格由低到高</li>
                 <li class="sort-item">价格由高到低</li>
                 <div class="pager">
-                    <span>1</span>/<span>300</span>
+                    <span>1</span>/<span>20</span>
                     <div class="choice">
                         <a  class="prev"></a><a  class="next"></a>
                         
@@ -872,6 +874,19 @@
         </ul>
     </div>
 
+
+    <!--翻页-->
+	<div class="zxf_pagediv"></div>
+	<script type="text/javascript">
+		//翻页
+		$(".zxf_pagediv").createPage({
+			pageNum: 20,
+			current: 1,
+			backfun: function (e) {
+				//console.log(e);//回调
+			}
+		});
+	</script>
 
 
     <!-- footer -->

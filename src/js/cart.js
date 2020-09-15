@@ -1,13 +1,13 @@
 
 
 
-
-
 			//获取cookie
 			let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
+			console.log(cookieStr);
 			if(!cookieStr){
 				$('.blank').css('display','block');
 			}else{
+				$('.blank').css('display','none');
 				//转对象
 				let cookieObj = convertStrToObj(cookieStr);
 				//遍历布局
@@ -73,7 +73,7 @@
 
 
 
-
+			//商品数量
             var sum = 0;
             var allPrice = 0;
             
@@ -89,12 +89,11 @@
             $(".submit .cart-choice-num").html(sum);
             $(".submit .cart-z-price-num").html(allPrice);
 
-           
+		   
+			//清空购物车
                 $('.delete-all').click(function(){
-                     $(function(){
-                    let cookieStr = $.cookie('carts','');
-                
-                    })
+					let cookieStr = $.cookie('carts','',{expires : 7,path : '/'});
+					location.href = "./cart.html";
                 })
             
            

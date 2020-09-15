@@ -1,0 +1,91 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+html,body{
+	height: 100%;
+	background: #fff;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+
+$fixed-width : 1200px;
+
+@mixin size($width,$height){
+    width : $width;
+    height : $height;
+}
+
+@mixin background($style){
+    background : $style;
+}
+@mixin background-position($style){
+    background-position : $style;
+}
+
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 140px;
+    background: #302e2e;
+    .footer-con{
+        @include size($fixed-width,100px);
+        margin: 0 auto;
+        padding: 20px 0;
+        overflow: hidden;
+        .qrcode{
+            float: right;
+            img{
+                width: 100px;   
+            }
+        }
+        .concat{
+            margin-top: 20px;
+            height: 24px;
+            line-height: 24px;
+            overflow: hidden;
+            color: #999;
+            .foot-icon{
+                margin-right: 10px;
+            }
+            .tel-text{
+                font-size: 14px;
+                font-weight: 700;
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: top;
+            }
+            .tel{
+                font-size: 18px;
+                color: #fc002d;
+                vertical-align: top;
+            }
+        }
+        .copy{
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 18px;
+            color: #999;
+            span{
+                margin-right: 15px;
+            }
+        }
+    }
+}

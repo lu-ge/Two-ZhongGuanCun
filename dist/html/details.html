@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/swiper-3.4.2.min.js"></script>
-    <script src="../js/details.js"></script>
+    <script src="../../dist/js/jquery.cookie.min.js"></script>
+    <script src="../../dist/js/tool.min.js"></script>
+    <script src="../../dist/js/details.min.js"></script>
+
 </head>
 <body>
     
+    <!-- 需要打开服务器，动态获取Json数据 -->
     
 
     <!-- site-nav -->
@@ -27,9 +31,9 @@
                 <a href="#" target="_blank">中在指数</a>
             </div>
             <div class="site-nav-right">
-                <a href="./login.html" target="_blank">登录</a>
+                <a href="../html/login.html" target="_blank">登录</a>
                 <span></span>
-                <a href="./registor.html" target="_blank">注册</a>
+                <a href="../html/registor.html" target="_blank">注册</a>
             </div>
         </div>
     </div>
@@ -889,6 +893,42 @@
                         }
                     }
                 }
+    </script>
+
+    <script>
+        new Cart();
+
+        //减号
+        $('.inform').on('click','#reduce',function(event){
+            let good_id = $(this).parent().parent().parent().attr('id');
+            let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
+            //转对象
+            
+            let cookieObj = convertStrToObj(cookieStr);
+            if(cookieObj[good_id].num > 1){
+                cookieObj[good_id].num --;
+            }			
+            $.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
+            $(this).next().html(cookieObj[good_id].num);
+            
+        })
+        
+        //加号
+        $('.inform').delegate('#plus','click',function(event){
+            let good_id = $(this).parent().parent().parent().attr('id');
+            let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
+            console.log(good_id);
+            //转对象
+            
+            let cookieObj = convertStrToObj(cookieStr);
+            cookieObj[good_id].num ++;
+                        
+            $.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
+            $(this).prev().text(cookieObj[good_id].num);
+            console.log(cookieObj[good_id].num);
+
+
+        })
     </script>
 </body>
 </html>
