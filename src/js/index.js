@@ -4,6 +4,7 @@ class Login{
         this.addEvent();
         this.logEvent();
         this.arr=[false,false];
+        this.request();
     }
     addEvent(){
         var that=this;
@@ -64,4 +65,31 @@ class Login{
             }
         })
     }
+
+    request(){
+        $.ajax({
+            type: "GET",
+            url: "./php/index01.php",
+            success:function (data) {
+                data=JSON.parse(data);
+                let str1='';
+                $.each(data,(index,value)=>{
+                    console.log(index,value);
+                    let str=`
+                    <li class="lins">
+                        <a href="#" class="product">
+                            <img src="${value.url}" alt="">
+                            <p class="pro-name">${value.title}</p>
+                            <p class="pro-price">${value.price}</p>
+                        </a>
+                    </li>
+                    `
+                    str1 += str;
+                    $(".con-content-right").html(str1);
+                })
+            },
+        })
+    }
 }
+
+
