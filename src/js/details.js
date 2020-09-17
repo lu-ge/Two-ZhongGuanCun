@@ -112,11 +112,11 @@ class Cart{
             //src
             let good_src = $(this).next().text();
             //name
-            let good_name = $(this).parent().parent().first().text();
+            let good_name = $(this).parent().parent().children('.inform-name').text();
             //价格
             let good_price = parseInt($(this).parent().prev().prev().find("#ite-pri").text());
 
-            console.log(good_price);
+            console.log(good_name);
             
             /*
                 key : carts

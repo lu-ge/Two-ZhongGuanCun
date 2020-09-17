@@ -3,16 +3,18 @@
 
 			//获取cookie
 			let cookieStr = $.cookie('carts') ? $.cookie('carts') : '';
-			console.log(cookieStr);
+			// console.log(cookieStr);
 			if(!cookieStr){
 				$('.blank').css('display','block');
 			}else{
 				$('.blank').css('display','none');
 				//转对象
 				let cookieObj = convertStrToObj(cookieStr);
+
 				//遍历布局
 				for(let key in cookieObj){
 					let good = cookieObj[key];
+					console.log(good.name);
 					$('.cart-content').append(
                     `
 					<div class="cart-box-pro-box" data-good-id="${key}">
@@ -44,6 +46,7 @@
 				$.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
 				$(this).next().html(cookieObj[good_id].num);
 				$(this).parent().next().html(cookieObj[good_id].num * cookieObj[good_id].price);
+				location.href = "./cart.html";
 			})
 			//加号
 			$('.cart-box-pro-box').delegate('.plus','click',function(event){
@@ -56,10 +59,11 @@
 				$.cookie('carts',JSON.stringify(cookieObj),{expires : 7,path : '/'});
 				$(this).prev().html(cookieObj[good_id].num);
 				$(this).parent().next().html(cookieObj[good_id].num * cookieObj[good_id].price);
+				location.href = "./cart.html";
 			})
 
 			
-
+			//删除
 			$('.cart-box-pro-box').on('click','.c-b-operation',function(){
 				let good_id = $(this).parent().attr('data-good-id');
 				let cookieStr = $.cookie('carts') ? $.cookie('carts'):'';
@@ -68,6 +72,7 @@
 				delete cookieObj[good_id];
 				$.cookie('carts',JSON.stringify(cookieObj));
 				$(this).parent().remove();
+				location.href = "./cart.html";
             })
 
 
@@ -90,7 +95,7 @@
             $(".submit .cart-z-price-num").html(allPrice);
 
 		   
-			//清空购物车
+				//清空购物车
                 $('.delete-all').click(function(){
 					let cookieStr = $.cookie('carts','',{expires : 7,path : '/'});
 					location.href = "./cart.html";
